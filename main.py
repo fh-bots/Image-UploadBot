@@ -13,7 +13,11 @@ TGraph = Client(
 
 @TGraph.on_message(Filters.command("start"))
 async def start(client, message):
-    await message.reply_text(f"Hello {message.from_user.first_name},\nIm telegram to telegra.ph image uploader bot by @W4RR10R", True)
+    await message.reply_text(f"Hello {message.from_user.first_name},\nI'm telegram to telegra.ph image uploader bot \nby @filimhouseadmin", True)
+    
+@TGraph.on_message(Filters.command("channel"))
+async def start(client, message):
+    await message.reply_text(f"These are the channels under @filimhouse: \n@FH-SOUTH\n@FH_HEVC\n@FH_OLD\n@FH_NEW\n@FH_DUBBED\n@FH_WORLD", True)
     
 @TGraph.on_message(Filters.photo)
 async def getimage(client, message):
